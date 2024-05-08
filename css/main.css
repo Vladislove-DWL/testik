@@ -1,0 +1,318 @@
+@import "./reset.css";
+
+
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap);
+
+
+
+
+html, body {
+    min-height: 100vh;
+}
+
+/* обращаемся ко всему body */
+body {
+    font-family: 'Manrope', 'san-serif';
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    row-gap: 20px;
+}
+
+/* шапка */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 40px 0px;
+    /* background: linear-gradient(92.7deg, #3e9234 20%, #10c2bc 100%), #232323; */
+    background: linear-gradient(90deg, #884ccc,#452f91,#001356);                                             
+}
+
+/* заголовок в шапке */
+.title {
+    font-size: 50px;
+    text-align: center;
+
+    color: white;
+}
+
+/* описание */
+.description p {
+    font-size: 25px;
+}
+
+/* родительский выбор источника */
+.sourceSelection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* выбор источника название */
+/* .sourceSelection h2 {
+    font-size: 25px;
+
+    margin-bottom: 5px; 
+} */
+
+
+/* выбор источника форма */
+.sourceSelection form {
+    font-size: 20px;
+    border-radius: 7px;
+    
+    width: auto;
+    padding: 5px 5px;
+}
+
+/* изначальный селектор */
+.sourceSelection select {
+    font-size: 25px;
+    color: white;
+
+    padding: 5px 5px;
+
+    border: 2px solid white;
+    border-radius: 7px;
+
+    background: linear-gradient(90deg, #7c3fc1,#452f91,#001356);
+
+    cursor: pointer;
+}
+
+
+
+/* кнопка сгенерировать при активации */
+.sourceSelection select:hover {
+    background: linear-gradient(90deg, #8d49da,#573bb9,#0829a2);
+}
+
+/* непосредственно выбор источника */
+.sourceSelection option {
+    color: white;
+    background-color: rgb(102, 102, 102);
+}
+
+/* сама карточка */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    padding: 40px 70px;
+    width: auto;
+    min-width: 300px;
+    
+    border: 2px solid black;
+    border-radius: 7px;
+
+    background-color: white;
+    box-shadow: 0 10px 30px 0 rgba(110, 38, 143, 0.56);
+}
+
+/* заголовки в карточке */
+.card h3 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+/* инпуты в карточке */
+.card input {
+    font-size: 20px;
+
+    padding: 3px;
+    margin-bottom: 10px;
+
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+
+/* карточка под карточкой */
+.card::before {
+    position: absolute;
+   
+    content: '';
+    border: 2px solid black;
+    
+    position: absolute;
+    left: 10px;
+    bottom: -10px;
+    z-index: -1;
+    
+    width: calc(100% - 20px);
+    height: 100%;
+
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px 0 rgba(110, 38, 143, 0.56);
+}
+
+/* кнопка сгенерировать */
+.btnGenerate {
+    color: white;
+    font-size: 25px;
+
+    width: auto;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+
+    border-radius: 7px;
+    background: linear-gradient(90deg, #7c3fc1,#452f91,#001356);
+
+    cursor: pointer;
+}
+
+/* кнопка сгенеририровать при нажатии */
+.btnGenerate:active {
+    transform: scale(0.95); 
+}
+
+/* кнопка сгенерировать при активации */
+.btnGenerate:hover {
+    background: linear-gradient(90deg, #8d49da,#573bb9,#0829a2);
+}
+
+/* контейнер result */
+/* .result {
+    position: relative;  
+} */
+
+/* заголовок результат */
+.result h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* кнопка скопировать внутри textarea */
+/* .result img {
+    position: absolute;
+    top: 45px;
+    
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer; 
+} */
+
+/* кнопка скопировать внутри textarea при нажатии */
+.result img:active {
+    transform: scale(0.8);
+}
+
+
+
+/* непосвредственно результат */
+.userResult {
+    border: 2px solid black;
+    border-radius: 7px;
+
+    padding: 10px;
+
+    width: 60%;
+    
+    font-size: 20px;
+}
+
+/* скрытие прокрутки по вертикали у texarea*/
+.userResult {
+    overflow-y: hidden; /* Скрываем прокрутку по вертикали */
+    resize: none; /* Отключаем возможность изменения размера textarea пользователем */
+    height: auto; /* Устанавливаем высоту textarea автоматически */
+}
+
+/* кнопка сбросить */
+.btnReset {
+    color: white;
+    font-size: 25px;
+
+    width: auto;
+
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 7px;
+    background: linear-gradient(90deg, #7c3fc1,#452f91,#001356);
+
+    cursor: pointer;
+}
+
+/* кнопка сбросить при нажатии */
+.btnReset:active {
+    transform: scale(0.95);
+}
+
+/* кнопка сбросить при наведении */
+.btnReset:hover {
+    background: linear-gradient(90deg, #8d49da,#573bb9,#0829a2);
+}
+
+/* подвал */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+
+    color: white;
+    font-size: 25px;
+
+    margin-top: 3%;
+    padding: 15px;
+    
+    background: linear-gradient(90deg, #7c3fc1,#452f91,#001356);
+}
+
+/* ссылки в подвале */
+.footer a {
+    width: auto;
+    margin-right: 20%;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* последняя ссылка в подвале */
+.footer a:last-child {
+    margin-right: 0;
+}
+
+/* картинки для подвала */
+.footer img {
+    margin-right: 10px;
+
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+}
+
+/* картинки при нажатии */
+.footer img:hover {
+    transform: scale(0.95);
+}
+
+.footer img:active {
+    transform: scale(0.85);
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список литературы</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="title">Оформление списка литературы</h1>
+    </header>
+
+    <div class="description">
+        <p>
+            Это интуитивно понятный и легко используемый инструмент, который поможет студентам
+            автоматически создавать форматированные списки литературы, освободив их от рутины
+            и позволив им сосредоточиться на содержании своих учебных работ!
+        </p>
+
+    </div>
+
+    <div class="sourceSelection">
+        <!-- <h2>Выберите источник</h2> -->
+        <form>
+            <select id="source">
+              <option value="oneAuthor">книги одного автора</option>
+              <option value="twoAuthor">книги двух авторов</option>
+            </select>
+          </form>
+    </div>
+
+    
+    <div class="card">
+        <form>
+            <h3>Фамилия автора:</h3>
+            <input class="lastname" type="text" placeholder="Пушкин">
+            
+            <h3>Инициалы автора:</h3>
+            <input class="firstname" type="text" placeholder="А. С.">
+            
+            <h3>Название книги:</h3>
+            <input class="nameOfBook" type="text" placeholder="Медный всадник">
+            
+            <h3>Город издательства:</h3>
+            <input class="nameOfCity" type="text" placeholder="Москва">
+            
+            <h3>Название издательства:</h3>
+            <input class="nameOfPublisher" type="text" placeholder="Просвещение">
+            
+            <h3>Год издания:</h3>
+            <input class="yearOfPublishing" type="text" placeholder="1995">
+           
+            <h3>Количество страниц:</h3>
+            <input class="numberOfPage" type="text" placeholder=" 255">     
+        </form>
+    </div>
+
+    <button class="btnGenerate">Сгенировать</button>
+
+ 
+    <div class="result">
+        <h2>Результат</h2>
+        <textarea class="userResult"></textarea>
+        <!-- <img src="./img/копировать.png" alt="copy" class="copy"> -->
+        
+    </div>
+
+    <button class="btnReset">Сбросить</button>
+
+    <footer class="footer">
+        
+        
+        <a href="https://t.me/vvvladislovvve" target="_blank">
+            <img src="./img/тг.png" alt="логотип вк">
+            Я в ТГ
+        </a>
+        
+        <a href="https://vk.com/vvvladislovvve" target="_blank">
+            <img src="./img/вк.png" alt="логотип вк">
+            Я в ВК
+        </a>
+        
+        <a href="https://t.me/vvvladislovvve" target="_blank">
+            <img src="./img/донатик.png" alt="логотип вк">
+            Я был бы рад
+        </a>
+    </footer>
+
+    
+</body>
+</html>
